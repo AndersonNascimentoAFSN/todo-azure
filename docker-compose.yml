@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  react-nginx-app: 
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - 8001
+    ports:
+      - 8001:80
+    environment:
+      - CHKIDAR_USEPOLLING=true
